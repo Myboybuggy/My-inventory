@@ -1,56 +1,12 @@
-﻿#include <iostream>
-#include <ctime>
+私は以前、プールにも行ったことがありませんでした。泳ぐこともまったくできません。そんな状態の私が、ダイビングライセンス（OWからAOWまで）を取得することにしたのです。
 
-int diffDates(int year, int month, int day) {
+多くの人にとって、ダイビングで一番難しいのは「水への恐怖」をこくふくすること。例えば、水中でマスクを外し、目を閉じて暗闇の中に身を置く瞬間、人は無力さや不安に襲われ、人にはそれぞれ、私とのなくて、すべてのテストをスムーズにクリアできました。
+私にとって一番つらかったのは、毎回陸上で数十キロの重い器材を背負って、水辺まで歩くこと。でも水に入った瞬間、その重さは嘘のように消え、体は驚くほど軽やかに。少し足を動かすだけで、移動できます
 
-    tm targetDate = {};
-    targetDate.tm_year = year - 1900;
-    targetDate.tm_mon = month - 1;
-    targetDate.tm_mday = day;
-    
-    tm baseDate = {};
-    baseDate.tm_year = 1990 - 1900;
-    baseDate.tm_mon = 0;
-    baseDate.tm_mday = 1;
+周りにはカラフルな魚たちが興味深そうにこちらを見つめていて、時には一緒に泳いでくれます。浅いところの水底には無数のウニが広がり、
+眠っているネコザメ近距離で見た、大きなウミガメと一緒に記念写真を撮リました
 
-    time_t target = mktime(&targetDate);
-    time_t base = mktime(&baseDate);
-
-    double difference  = difftime(target, base);
-    return difference  / (60 * 60 * 24);
-}
-
-std::string checkAct(int startDay) {
-
-    int dayLoop = startDay % 5;
-
-    if (dayLoop == 0 || dayLoop == 4) {
-        return "晒网";
-    } else {
-        return "打鱼";
-    }
-}
-
-int main() {
-    std::string inputDate;
-    std::cout << "输入 ： ";
-    std::cin >> inputDate;
-
-    int year, month, day;
-    sscanf(inputDate.c_str(), "%d-%d-%d", &year, &month, &day);
-
-    int startDay = diffDates(year, month, day);
-    std::string result = checkAct(startDay + 1);
-
-    std::cout << "输出 ： " << result << std::endl;
-
-    return 0;
-}
-
-//测试日期
-//1990-01-02
-//1990-01-04
-//1990-01-06
+人は空を飛ぶ自由に憧れますが、水の中の自由もまた、同じように美しいものです。もし少しでも興味があるなら、ぜひ一度ダイビングを体験してみてください。そこには、別の世界の感じです。
 
 
-https://drive.google.com/file/d/126tH07_GA70U7S9KgIz2Ri3MFJ5xq0j0/view?usp=drivesdk
+
